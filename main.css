@@ -40,7 +40,7 @@ div.menu ul li a:hover  {
 div.hero {
     height: 350px;
     background-color: #b4c6f0;
-    background-image: url('/bg.png');
+    background-image: url('bg.png');
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -106,8 +106,9 @@ div.hero h2 {
     position: absolute;
     transform: translateY(-100%);
   }
+  /* design 87654321` */
   a.skip-link{
-      margin-top: 11px;
+      margin-top: 11px !important; 
   }
   
   .skip-link:focus {
