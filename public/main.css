@@ -96,22 +96,19 @@ div.hero h2 {
         margin: 10px;
     }
 }
-.skip-link {
-    background: #319795;
-    color: #fff;
-    font-weight: 700;
-    left: 50%;
-   
-    padding: 4px;
-    position: absolute;
-    transform: translateY(-100%);
-  }
-  /* design 87654321` */
-  a.skip-link{
-      margin-top: 11px !important; 
-  }
-  
-  .skip-link:focus {
-    transform: translateY(0%);
-  }
+a.skip-link {
+    left:-999px;
+    position:absolute;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+a.skip-link:focus, a.skip-link:active {
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow:auto;
+}
   
