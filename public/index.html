@@ -176,7 +176,7 @@
             }
 
             function getBudget() {
-                axios.get('/budget')
+                axios.get('http://localhost:3000/budget')
                     .then(function (res) {
                         console.log(res);
                         for (var i = 0; i < res.data.myBudget.length; i++) {
@@ -250,7 +250,7 @@
             };
 
             function getBudgetD3js() {
-                axios.get('/budget')
+                axios.get('http://localhost:3000/budget')
                     .then(function (res) {
                         console.log(res);
                         for (var i = 0; i < res.data.myBudget.length; i++) {
@@ -304,10 +304,6 @@
             svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
             var key = function (d) { return d.data.label; };
-
-
-
-            donut(randomD3Data());
 
             d3.select(".randomize")
                 .on("click", function () {

@@ -1,9 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 3000;
+
+
+app.use(cors());
 const fs = require('fs');
 
-app.use('/', express.static('public'));
+//app.use('/', express.static('public'));
 
 //Reading from JSON file
 let rawdata = fs.readFileSync('myBudget.json');
@@ -27,7 +31,7 @@ app.get('/budget', (req, res) =>{
 
 
 app.listen(port, () => {
-    console.log('Example app listening at http://localhost:'+port);
+    console.log('API Served and  listening at http://localhost:'+port);
 });
 
 
